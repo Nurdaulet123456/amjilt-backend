@@ -15,7 +15,10 @@ app.use(function(req, res, next) {
     next();
 })
 .use(bodyParser.json());
-app.use(cors())
+app.use(cors({
+    origin: "*",
+    credentials: true
+}))
 
 db()
 

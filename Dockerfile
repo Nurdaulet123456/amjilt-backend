@@ -4,7 +4,7 @@ RUN mkdir -p /post
 
 WORKDIR /post
 
-COPY package*.json .
+COPY package*.json ./
 
 RUN npm ci
 

@@ -16,7 +16,7 @@ services:
   api: 
     build: .
     ports:
-      - 4000:3000
+      - 3000:3000
     environment:
       DB: mongodb://mongo_db:27017/admin
       POR: 3000

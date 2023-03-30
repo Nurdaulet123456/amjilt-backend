@@ -1,15 +1,27 @@
 {
     "version": 2,
-    "builds": [
-        {
-            "src": "*.js",
-            "use": "@vercel/node"
+    "builds": [{
+        "src": "*.js",
+        "use": "@vercel/node"
+    }],
+    "routes": [{
+        "src": "/(.*)",
+        "dest": "/"
+    }],
+    "functions": {
+
+        "route/postAll.js": {
+
+            "memory": 3008,
+
+            "maxDuration": 60
+        },
+
+        "route/post.js": {
+
+            "memory": 1024,
+
+            "maxDuration": 30
         }
-    ],
-    "routes": [
-        {
-            "src": "/(.*)",
-            "dest": "/"
-        }
-    ]
+    }
 }
